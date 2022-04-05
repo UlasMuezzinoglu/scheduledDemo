@@ -8,7 +8,7 @@ import ulas.scheduled.scheduleddemo.job.CoinbaseJob;
 import javax.annotation.PostConstruct;
 
 @Service
-public class BusinessService {
+public class AdminService {
     @Autowired
     private SchedulerService scheduler;
 
