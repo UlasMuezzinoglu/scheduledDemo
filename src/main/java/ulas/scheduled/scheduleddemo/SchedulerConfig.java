@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SchedulerConfig {
-    @Bean
+    @Bean()
     public Scheduler getScheduler() throws SchedulerException {
         return StdSchedulerFactory.getDefaultScheduler();
     }

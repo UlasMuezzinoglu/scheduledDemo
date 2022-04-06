@@ -7,6 +7,7 @@ import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ulas.scheduled.scheduleddemo.info.TimerInfo;
 import ulas.scheduled.scheduleddemo.util.TimerUtils;
@@ -19,7 +20,7 @@ public class SchedulerService {
     private final Scheduler scheduler;
 
     @Autowired
-    public SchedulerService(final Scheduler scheduler) {
+    public SchedulerService(@Qualifier("getScheduler") final Scheduler scheduler) {
         this.scheduler = scheduler;
     }
 
